@@ -1,2 +1,21 @@
-<p>with-auth works!</p>
-<router-outlet></router-outlet>
+<div class="main-wrapper">
+    <div class="top-nav">
+
+    </div>
+    <div class="content-part">
+        <div class="side-nav">
+            <div *ngFor="let item of menuItems" class="nav-bar" [ngClass]="{'active': item.url === activeUrl}">
+                    <div class="logo-icon">
+                        <img src="assets/images/login-icons.png" width="35px">
+                    </div>
+                    <h5 class="logo-text">
+                        {{item.name}}
+                    </h5>
+            </div>
+        </div>
+        <div class="main-part">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>

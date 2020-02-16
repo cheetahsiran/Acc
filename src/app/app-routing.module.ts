@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: 'src/app/with-auth/with-auth.module#WithAuthModule'
+    loadChildren: () => import('src/app/with-auth/with-auth.module').then(m => m.WithAuthModule)
   }
 ];
 
