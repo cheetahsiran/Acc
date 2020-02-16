@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: WithoutAuthComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: 'src/app/with-auth/with-auth.module#WithAuthModule'
   }
 ];
 
